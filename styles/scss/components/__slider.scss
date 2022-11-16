@@ -11,6 +11,7 @@
   background-image: url("/assets/img/bgimage.svg");
   background-repeat: repeat;
   object-fit: cover;
+  padding-top: 40px;
   background-color: var(--color-white);
   border-radius: 20px 0px 0px 20px;
   @include mixins.flexbox(row, nowrap, space-between, 10px);
@@ -19,12 +20,15 @@
 }
 .cardFood {
   width: 280px;
-  height: 380px;
   padding: 0 30px;
   margin: 0 auto;
   display: inline-block;
   white-space: normal;
   flex: 0 0 auto;
+  &:hover{
+    transform: scale(1.03);
+    transition: all .6s ease;
+   }
   &__img {
     width: 195px;
     background-repeat: no-repeat;
@@ -77,6 +81,10 @@
     margin-top: -307px;
     padding-left: 25px !important;
     .card {
+   &:hover{
+    transform: scale(1.03);
+    transition: all .5s ease;
+   }
       &__img {
         width: 328px;
         border-radius: 15px;
