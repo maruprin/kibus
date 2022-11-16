@@ -1,0 +1,51 @@
+.presentation{
+    margin-bottom: 167px;
+    &__img{
+        &--elipse{
+            width: 330px;
+            height: 280px;
+            position: absolute;
+            left: 20px;
+            &:hover{
+                transform: rotate(20deg);
+                transition: all 1.8s ease;
+            }
+        }
+        &--dogGirl{
+            width: 322px;
+            height: 260px;
+            position: relative;
+            left: 8px;
+            top: 17px;
+            &:hover{
+                transform: scale(1.05);
+                transition: all 1.8s ease;
+            }
+        }
+    }
+    &__title{
+        margin-top: 50px;
+        margin-bottom: 15px;
+        &--dot{
+            color: var(--color-primary);
+            
+        }
+    }
+    &__text{
+        margin-bottom: 40px;
+    }
+    &__btn{
+        &--arrow{
+            background-image: url('/assets/svg/arrow-circleW.svg');
+            object-fit: cover;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            &:hover{
+                background-image: url('/assets/svg/arrow-circleO.svg'
+                );
+            }
+            
+        }
+    }
+}
