@@ -159,6 +159,12 @@ body {
   line-height: 28px;
 }
 
+.h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
 .btn {
   border: 1.5px solid var(--color-primary);
   text-align: center;
@@ -186,7 +192,7 @@ body {
   gap: 15px;
 }
 .btn--LArrow {
-  width: 357px;
+  width: 327px;
   height: 50px;
   padding: 16px 70px;
   display: flex;
@@ -194,8 +200,17 @@ body {
   justify-content: center;
   gap: 15px;
 }
+.btn--LArrow img:nth-of-type(2) {
+  display: none;
+}
+.btn--LArrow:hover img:nth-of-type(1) {
+  display: none;
+}
+.btn--LArrow:hover img:nth-of-type(2) {
+  display: block;
+}
 .btn--large {
-  width: 357px;
+  width: 327px;
   height: 50px;
   padding: 16px 70px;
 }
@@ -258,6 +273,10 @@ body {
 .presentation__text {
   margin-bottom: 40px;
 }
+.presentation__btn {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 .presentation__btn--arrow {
   background-image: url("/assets/svg/arrow-circleW.svg");
   -o-object-fit: cover;
@@ -275,43 +294,49 @@ body {
   position: relative;
 }
 
-.sliderContainer {
-  padding-left: 25px;
+.sliderContainer-food {
+  margin-left: 25px;
+  box-shadow: 0px 14px 37px 19px rgba(126, 126, 126, 0.04);
+  position: relative;
+  top: -125px;
 }
 
 .cardsContainer {
   width: 100%;
   height: 398px;
-  background-image: url("/assets/img/bg-image.png");
-  background-repeat: no-repeat;
+  background-image: url("/assets/img/bgimage.svg");
+  background-repeat: repeat;
   -o-object-fit: cover;
      object-fit: cover;
   background-color: var(--color-white);
   border-radius: 20px 0px 0px 20px;
-  white-space: nowrap;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 10px;
+  scrollbar-width: none;
+  overflow-x: auto;
 }
 
 .cardFood {
   width: 280px;
-  height: 360px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  gap: 0;
-  align-items: center;
+  height: 380px;
   padding: 0 30px;
   margin: 0 auto;
+  display: inline-block;
+  white-space: normal;
+  flex: 0 0 auto;
 }
 .cardFood__img {
   width: 195px;
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
-  display: flex;
+  margin: 0 auto;
 }
 .cardFood__title {
-  display: flex;
   margin-bottom: 20px;
+  text-align: center;
 }
 .cardFood__text {
   color: var(--color-greyText);
@@ -325,11 +350,78 @@ body {
 .cardFood__btn {
   background-color: var(--color-greyBtn);
   border: 1.5px solid var(--color-greyBtn);
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: inline-flex;
+  gap: 10px;
 }
-.cardFood__btn .arrow {
-  background-image: url("/assets/svg/arrowW.svg");
+.cardFood__btn img:nth-of-type(2) {
+  display: none;
+}
+.cardFood__btn:hover img:nth-of-type(1) {
+  display: none;
+}
+.cardFood__btn:hover img:nth-of-type(2) {
+  display: block;
+}
+
+.sliderContainer-dog .elipse {
+  display: block;
+  margin: 0 auto;
+}
+.sliderContainer-dog .cardsContainer-dog {
+  width: 100%;
+  height: 398px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 10px;
+  scrollbar-width: none;
+  overflow-x: auto;
+  margin-top: -307px;
+  padding-left: 25px !important;
+}
+.sliderContainer-dog .cardsContainer-dog .card__img {
+  width: 328px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
 }
 
 .product {
   background-color: var(--color-secundBack);
+}
+.product__description {
+  background-image: url("/assets/img/bgimage.svg");
+}
+.product__description--title {
+  margin-bottom: 20px;
+}
+.product__description--text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+.product__description--btn {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.product__description--dispositivoImg {
+  margin: 0 auto;
+  display: block;
+  margin-top: 100px;
+}
+.product__benefits {
+  padding: 40px;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 40%;
+  gap: 60px;
+  align-content: space-between;
+}
+.product__benefits .item {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

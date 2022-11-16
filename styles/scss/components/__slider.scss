@@ -1,0 +1,88 @@
+@use "../utils/_mixins";
+.sliderContainer-food {
+  margin-left: 25px;
+  box-shadow: 0px 14px 37px 19px rgba(126, 126, 126, 0.04);
+  position: relative;
+  top: -125px;
+}
+.cardsContainer {
+  width: 100%;
+  height: 398px;
+  background-image: url("/assets/img/bgimage.svg");
+  background-repeat: repeat;
+  object-fit: cover;
+  background-color: var(--color-white);
+  border-radius: 20px 0px 0px 20px;
+  @include mixins.flexbox(row, nowrap, space-between, 10px);
+  scrollbar-width: none;
+  overflow-x: auto;
+}
+.cardFood {
+  width: 280px;
+  height: 380px;
+  padding: 0 30px;
+  margin: 0 auto;
+  display: inline-block;
+  white-space: normal;
+  flex: 0 0 auto;
+  &__img {
+    width: 195px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__text {
+    color: var(--color-greyText);
+    display: flex;
+    hyphens: none;
+    text-align: center;
+    width: 100%;
+  }
+  &__btn {
+    background-color: var(--color-greyBtn);
+    border: 1.5px solid var(--color-greyBtn);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: inline-flex;
+    gap: 10px;
+    img:nth-of-type(2) {
+      display: none;
+    }
+    &:hover {
+      img:nth-of-type(1) {
+        display: none;
+      }
+      img:nth-of-type(2) {
+        display: block;
+      }
+    }
+  }
+}
+.sliderContainer-dog {
+  .elipse {
+    display: block;
+    margin: 0 auto;
+  }
+  .cardsContainer-dog {
+    width: 100%;
+    height: 398px;
+    background-repeat: no-repeat;
+    @include mixins.flexbox(row, nowrap, space-between, 10px);
+    scrollbar-width: none;
+    overflow-x: auto;
+    margin-top: -307px;
+    padding-left: 25px !important;
+    .card {
+      &__img {
+        width: 328px;
+        border-radius: 15px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}

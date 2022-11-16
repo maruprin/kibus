@@ -35,6 +35,8 @@
         margin-bottom: 40px;
     }
     &__btn{
+        margin: 0 auto;
+        margin-bottom: 20px;
         &--arrow{
             background-image: url('/assets/svg/arrow-circleW.svg');
             object-fit: cover;
