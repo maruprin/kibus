@@ -669,7 +669,7 @@ div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 100%;
-  gap: 60px;
+  gap: 35px;
 }
 @media (min-width: 600px) {
   .product__functions--benefits {

@@ -71,7 +71,7 @@
       padding: 40px;
       width: 100%;
       margin: 0 auto;
-      @include mixins.grid(2, 100%, 60px);
+      @include mixins.grid(2, 100%, 35px);
       @media (min-width: 600px) {
         width: 390px;
        }
