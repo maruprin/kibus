@@ -688,7 +688,7 @@ body {
 }
 @media (min-width: 1200px) {
   .product__functions--dispositivo {
-    background-image: url("../../../assets/img/dispositivo-desktop.png");
+    background-image: url("../../assets/img/dispositivo-desktop.png");
     width: 900px;
     height: 850px;
     background-repeat: no-repeat;
