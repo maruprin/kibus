@@ -120,6 +120,8 @@ body {
   --color-greyText: #767676;
   --color-greyBtn: #d5dbe1;
   --color-footerBG: #111111;
+  --color-greyTransparent: rgba(255, 255, 255, 0.3);
+  --color-primaryTransparent: rgba(93, 45, 20, 0.6);
 }
 
 .header {
@@ -148,10 +150,6 @@ body {
     width: 120px;
     height: 55px;
   }
-}
-
-div {
-  border: 1px solid red;
 }
 
 .h1 {
@@ -529,6 +527,31 @@ div {
     margin-left: 40px;
   }
 }
+.sliderContainer-dog__btn {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .sliderContainer-dog__btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    margin: 0 auto;
+    background-color: var(--color-greyTransparent);
+  }
+  .sliderContainer-dog__btn--prev {
+    top: 32%;
+    padding-right: 5px;
+    left: 60px;
+  }
+  .sliderContainer-dog__btn--next {
+    top: 32%;
+    left: 650px;
+    padding-left: 5px;
+  }
+}
 .sliderContainer-dog .cardsContainer-dog {
   width: 100%;
   height: 398px;
@@ -564,6 +587,8 @@ div {
   border-radius: 15px;
   display: block;
   margin: 0 auto;
+  height: 272px;
+  overflow-y: hidden;
 }
 @media (min-width: 1200px) {
   .sliderContainer-dog .cardsContainer-dog .card__img {

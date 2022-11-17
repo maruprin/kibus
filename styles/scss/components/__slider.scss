@@ -64,7 +64,7 @@
     gap: 10px;
     height: 50px;
     width: 150px;
-    img{
+    img {
       width: 25px;
       height: 25px;
     }
@@ -90,7 +90,7 @@
     width: 345px;
     height: 330px;
     @media (min-width: 1200px) {
-      width:692px;
+      width: 692px;
       height: 652px;
     }
   }
@@ -98,6 +98,30 @@
     width: 680px;
     height: 515px;
     margin-left: 40px;
+  }
+  &__btn {
+    display: none;
+    @media (min-width: 1200px) {
+      display: block;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border-radius: 50%;
+      position: absolute;
+      margin: 0 auto;
+      background-color: var(--color-greyTransparent);
+
+      &--prev {
+        top: 32%;
+        padding-right: 5px;
+        left: 60px;
+      }
+      &--next {
+        top: 32%;
+        left: 650px;
+        padding-left: 5px;
+      }
+    }
   }
   .cardsContainer-dog {
     width: 100%;
@@ -128,10 +152,13 @@
         border-radius: 15px;
         display: block;
         margin: 0 auto;
+        height: 272px;
+          overflow-y: hidden;
         @media (min-width: 1200px) {
-         width: 680px;
-         height: 515px;
-         object-fit: cover;
+          width: 680px;
+          height: 515px;
+          object-fit: cover;
+          
         }
       }
     }
