@@ -1,7 +1,7 @@
 @use "../utils/_mixins";
 .product {
   background-color: var(--color-secundBack);
-  background-image: url("./assets/img/bg-image.png");
+  background-image: url("../../assets/img/bg-image.png");
   &__description {
     margin-bottom: 90px;
     hyphens: none;

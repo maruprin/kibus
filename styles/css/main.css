@@ -139,7 +139,7 @@ body {
   }
 }
 .header__logo {
-  background-image: url("../../../assets/img/logo-mobile.svg");
+  background-image: url("../../assets/img/logo-mobile.svg");
   background-repeat: no-repeat;
   width: 72px;
   height: 32px;
@@ -424,7 +424,7 @@ body {
 .cardsContainer {
   width: 100%;
   height: 398px;
-  background-image: url("./assets/img/bgimage.svg");
+  background-image: url("../../assets/img/bgimage.svg");
   background-repeat: repeat;
   -o-object-fit: cover;
      object-fit: cover;
@@ -614,7 +614,7 @@ body {
 
 .product {
   background-color: var(--color-secundBack);
-  background-image: url("./assets/img/bg-image.png");
+  background-image: url("../../assets/img/bg-image.png");
 }
 .product__description {
   margin-bottom: 90px;
