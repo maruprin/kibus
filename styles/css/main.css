@@ -677,6 +677,10 @@ body {
   height: 480px;
   background-size: cover;
 }
+.product__functions--dispositivo:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
 @media (min-width: 600px) {
   .product__functions--dispositivo {
     width: 390px;
