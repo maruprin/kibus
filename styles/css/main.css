@@ -150,20 +150,24 @@ body {
   }
 }
 
+div {
+  border: 1px solid red;
+}
+
 .h1 {
-  font-size: 32px;
+  font-size: 31px;
   line-height: 32px;
   font-weight: 700;
 }
 
 .h2 {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 700;
   line-height: 32px;
 }
 
 .h3 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 21.6px;
   color: var(--color-secondary);
@@ -189,7 +193,6 @@ body {
   border: 1.5px solid var(--color-primary);
   text-align: center;
   cursor: pointer;
-  padding: 16px 32px;
   font-weight: 600;
   font-size: 16px;
   border-radius: 28px;
@@ -214,11 +217,15 @@ body {
 .btn--LArrow {
   width: 327px;
   height: 50px;
-  padding: 16px 70px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   gap: 15px;
+  align-items: center;
+}
+.btn--LArrow img {
+  width: 25px;
+  height: 25px;
 }
 .btn--LArrow img:nth-of-type(2) {
   display: none;
@@ -260,6 +267,7 @@ body {
 }
 
 .presentation {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -275,7 +283,7 @@ body {
   }
 }
 .presentation__img {
-  width: 350px;
+  width: 320px;
   margin: 0 auto;
 }
 @media (min-width: 1200px) {
@@ -301,7 +309,7 @@ body {
   }
 }
 .presentation__img--dogGirl {
-  width: 322px;
+  width: 100%;
   height: 260px;
   position: relative;
   margin-top: 15px;
@@ -328,15 +336,15 @@ body {
 .presentation__bloque2__title {
   margin-top: 50px;
   margin-bottom: 15px;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
 }
 @media (min-width: 1200px) {
   .presentation__bloque2__title {
     font-size: 72px;
     line-height: 72px;
     font-weight: 700;
-    -webkit-hyphens: none;
-        -ms-hyphens: none;
-            hyphens: none;
     margin-bottom: 25px;
   }
 }
@@ -345,6 +353,9 @@ body {
 }
 .presentation__bloque2__text {
   margin-bottom: 40px;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
 }
 @media (min-width: 1200px) {
   .presentation__bloque2__text {
@@ -359,8 +370,7 @@ body {
   }
 }
 .presentation__bloque2__btn {
-  margin: 0 auto;
-  margin-bottom: 20px;
+  width: 100%;
 }
 .presentation__bloque2__btn--arrow {
   background-image: url("/assets/svg/arrow-circleW.svg");
@@ -379,6 +389,9 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   gap: 0;
+  height: 150px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 @media (min-width: 1200px) {
   .buttonsContainer {
@@ -387,6 +400,7 @@ body {
     justify-content: flex-start;
     gap: 20px;
     max-width: 700px;
+    margin: 0;
   }
 }
 
@@ -416,15 +430,17 @@ body {
   background-repeat: repeat;
   -o-object-fit: cover;
      object-fit: cover;
-  padding-top: 40px;
+  padding: 20px;
   background-color: var(--color-white);
   border-radius: 20px 0px 0px 20px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
   scrollbar-width: none;
+  align-items: flex-start;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 @media (min-width: 1200px) {
   .cardsContainer {
@@ -433,12 +449,12 @@ body {
 }
 
 .cardFood {
-  width: 280px;
-  padding: 0 30px;
-  margin: 0 auto;
-  display: inline-block;
+  width: 350px;
   white-space: normal;
-  flex: 0 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  gap: 10px;
 }
 .cardFood:hover {
   transform: scale(1.03);
@@ -463,6 +479,7 @@ body {
           hyphens: none;
   text-align: center;
   width: 100%;
+  height: 100px;
 }
 .cardFood__btn {
   background-color: var(--color-greyBtn);
@@ -471,6 +488,17 @@ body {
   margin-bottom: 20px;
   display: inline-flex;
   gap: 10px;
+  height: 50px;
+  width: 150px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.cardFood__btn img {
+  width: 25px;
+  height: 25px;
 }
 .cardFood__btn img:nth-of-type(2) {
   display: none;
@@ -548,13 +576,29 @@ body {
 
 .product {
   background-color: var(--color-secundBack);
+  background-image: url("/assets/img/bg-image.png");
 }
 .product__description {
   margin-bottom: 90px;
-  background-image: url("/assets/img/bgimage.svg");
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+@media (min-width: 1200px) {
+  .product__description {
+    max-width: 524px;
+    padding-right: 80px;
+  }
 }
 .product__description--title {
   margin-bottom: 20px;
+}
+@media (min-width: 1200px) {
+  .product__description--title {
+    margin-top: 100px;
+    font-size: 36px;
+    line-height: 43.2px;
+  }
 }
 .product__description--text {
   font-weight: 400;
@@ -577,10 +621,13 @@ body {
   .product__functions {
     display: flex;
     flex-flow: row-reverse nowrap;
-    justify-content: space-around;
-    gap: 200;
-    margin-top: 90px;
-    padding: 60px 90px;
+    justify-content: center;
+    gap: 0px;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding-bottom: 0px;
   }
 }
 .product__functions--dispositivo {
@@ -589,25 +636,34 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0 auto;
-  width: 376px;
-  height: 455px;
+  width: 390px;
+  height: 480px;
+  background-size: cover;
 }
 @media (min-width: 1200px) {
   .product__functions--dispositivo {
-    margin-top: 200px;
     background-image: url("../../../assets/img/dispositivo-desktop.png");
-    width: 576px;
-    height: 455px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    width: 900px;
+    height: 850px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    margin-top: 0px;
+  }
+}
+@media (min-width: 800px) {
+  .product__functions--dispositivo {
+    background-size: contain;
   }
 }
 .product__functions--benefits {
   padding: 40px;
-  padding-bottom: 100px;
+  width: 390px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 40%;
+  grid-auto-rows: 100%;
   gap: 60px;
 }
 @media (min-width: 1200px) {
@@ -615,11 +671,16 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: 10%;
-    gap: 28px;
+    gap: 35px;
     margin-top: 150px;
+    width: 305px;
+    height: 850px;
+    padding: 0px;
+    margin-top: 0px;
   }
 }
 .product__functions--benefits .item {
+  width: 126px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -641,6 +702,7 @@ body {
     justify-content: space-between;
     gap: 15px;
     align-items: center;
+    width: 300px;
   }
 }
 .product__functions--benefits .item__img {
@@ -675,7 +737,7 @@ body {
   .product-blockContainer {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 0px;
   }
 }
@@ -687,18 +749,18 @@ body {
 }
 @media (min-width: 1200px) {
   .footer {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-auto-rows: 1fr;
-    gap: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 60px;
     align-items: start;
-    grid-template-areas: "about about about about policy policy redes redes pay pay";
     padding: 30px;
     padding-top: 50px;
   }
 }
 .footer__about {
   padding-top: 100px;
+  max-width: 700px;
 }
 @media (min-width: 1200px) {
   .footer__about {
@@ -706,7 +768,7 @@ body {
     -webkit-hyphens: none;
         -ms-hyphens: none;
             hyphens: none;
-    grid-area: about;
+    max-width: 380px;
   }
 }
 .footer__about--title {
@@ -724,7 +786,7 @@ body {
 @media (min-width: 1200px) {
   .footer__policy {
     margin-bottom: 0;
-    grid-area: policy;
+    padding-top: 48px;
   }
 }
 .footer__policy--title {
@@ -736,6 +798,17 @@ body {
   font-size: 16px;
   line-height: 22px;
 }
+.footer__policy--link--FAQ {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .footer__policy--link--FAQ {
+    display: block;
+  }
+  .footer__policy--link--FAQ:hover {
+    color: var(--color-primary);
+  }
+}
 .footer__policy--link:hover {
   color: var(--color-primary);
 }
@@ -745,6 +818,7 @@ body {
 @media (min-width: 1200px) {
   .footer__contact {
     display: none;
+    padding-top: 48px;
   }
 }
 .footer__contact--title {
@@ -777,8 +851,8 @@ body {
 }
 @media (min-width: 1200px) {
   .footer__redes {
-    grid-area: redes;
     margin: 0 auto;
+    padding-top: 48px;
   }
 }
 .footer__redes--icon {
@@ -797,12 +871,12 @@ body {
   transition: all 0.3s ease;
 }
 .footer__pay {
-  padding-bottom: 200px;
+  padding-bottom: 150px;
 }
 @media (min-width: 1200px) {
   .footer__pay {
-    grid-area: pay;
     padding: 0px;
+    padding-top: 48px;
   }
 }
 .footer__pay--title {

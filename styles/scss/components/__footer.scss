@@ -4,18 +4,19 @@
   background-color: var(--color-footerBG);
   color: var(--color-white);
   @media (min-width: 1200px) {
-  @include mixins.grid(10, 1fr, 40px);
+  @include mixins.flexbox(row,nowrap, space-between, 60px);
   align-items: start;
-  grid-template-areas: 'about about about about policy policy redes redes pay pay';
+  // grid-template-areas: 'about about about about policy policy redes redes pay pay';
   padding: 30px;
   padding-top: 50px;
   }
   &__about {
     padding-top: 100px;
+    max-width: 700px;
     @media (min-width: 1200px) {
       padding-top: 0px;
       hyphens: none;
-      grid-area: about;
+      max-width: 380px;
       }
     &--title {
       margin-bottom: 20px;
@@ -31,7 +32,7 @@
     margin-bottom: 50px;
     @media (min-width: 1200px) {
       margin-bottom: 0;
-      grid-area: policy;
+      padding-top: 48px;
       }
     &--title {
       margin-bottom: 10px;
@@ -41,6 +42,15 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 22px;
+      &--FAQ{
+        display: none;
+        @media (min-width: 1200px) {
+          display: block;
+          &:hover {
+            color: var(--color-primary);
+          }
+          }
+      }
       &:hover {
         color: var(--color-primary);
       }
@@ -50,6 +60,7 @@
     margin-bottom: 50px;
     @media (min-width: 1200px) {
       display: none;
+      padding-top: 48px;
     }
     &--title {
       margin-bottom: 10px;
@@ -77,8 +88,8 @@
     margin-bottom: 40px;
     @include mixins.flexbox(row, nowrap, flex-start, 30px);
     @media (min-width: 1200px) {
-      grid-area: redes;
       margin: 0 auto;
+      padding-top: 48px;
     }
     &--icon {
       padding: 10px;
@@ -95,10 +106,11 @@
     }
   }
   &__pay {
-    padding-bottom: 200px;
+    padding-bottom: 150px;
     @media (min-width: 1200px) {
-      grid-area: pay;
       padding: 0px;
+      padding-top: 48px;
+      
     }
     &--title {
       margin-bottom: 15px;
