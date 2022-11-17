@@ -57,7 +57,7 @@
     height: 50px;
     @include mixins.flexbox(row, nowrap, center, 15px);
     align-items: center;
-    img{
+    img {
       width: 25px;
       height: 25px;
     }

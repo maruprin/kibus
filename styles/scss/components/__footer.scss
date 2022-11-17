@@ -4,11 +4,11 @@
   background-color: var(--color-footerBG);
   color: var(--color-white);
   @media (min-width: 1200px) {
-  @include mixins.flexbox(row,nowrap, space-between, 60px);
-  align-items: start;
-  // grid-template-areas: 'about about about about policy policy redes redes pay pay';
-  padding: 30px;
-  padding-top: 50px;
+    @include mixins.flexbox(row, nowrap, space-between, 60px);
+    align-items: start;
+    // grid-template-areas: 'about about about about policy policy redes redes pay pay';
+    padding: 30px;
+    padding-top: 50px;
   }
   &__about {
     padding-top: 100px;
@@ -17,7 +17,7 @@
       padding-top: 0px;
       hyphens: none;
       max-width: 380px;
-      }
+    }
     &--title {
       margin-bottom: 20px;
     }
@@ -33,7 +33,7 @@
     @media (min-width: 1200px) {
       margin-bottom: 0;
       padding-top: 48px;
-      }
+    }
     &--title {
       margin-bottom: 10px;
     }
@@ -42,14 +42,14 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 22px;
-      &--FAQ{
+      &--FAQ {
         display: none;
         @media (min-width: 1200px) {
           display: block;
           &:hover {
             color: var(--color-primary);
           }
-          }
+        }
       }
       &:hover {
         color: var(--color-primary);
@@ -110,7 +110,6 @@
     @media (min-width: 1200px) {
       padding: 0px;
       padding-top: 48px;
-      
     }
     &--title {
       margin-bottom: 15px;

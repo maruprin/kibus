@@ -110,16 +110,27 @@
       position: absolute;
       margin: 0 auto;
       background-color: var(--color-greyTransparent);
-
       &--prev {
-        top: 32%;
+        top: 35%;
         padding-right: 5px;
         left: 60px;
+        &--active {
+          background-color: var(--color-primaryTransparent);
+          top: 35%;
+          left: 60px;
+          padding-right: 5px;
+        }
       }
       &--next {
-        top: 32%;
+        top: 35%;
         left: 650px;
         padding-left: 5px;
+        &--active {
+          background-color: var(--color-primaryTransparent);
+          top: 35%;
+          left: 650px;
+          padding-left: 5px;
+        }
       }
     }
   }
@@ -153,12 +164,11 @@
         display: block;
         margin: 0 auto;
         height: 272px;
-          overflow-y: hidden;
+        overflow-y: hidden;
         @media (min-width: 1200px) {
           width: 680px;
           height: 515px;
           object-fit: cover;
-          
         }
       }
     }

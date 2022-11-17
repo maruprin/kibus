@@ -1,22 +1,28 @@
 let current = 0;
 
-const card = document.getElementsByClassName('child');
-const back = document.getElementById('prev-button');
-const next = document.getElementById('next-button');
+const card = document.getElementsByClassName("child");
+const back = document.getElementById("prev-button");
+const next = document.getElementById("next-button");
 back.onclick = () => {
-  console.log('prev');
-  if (current > 0)
-  card[--current].scrollIntoView({behavior: "smooth"});
+  if (current > 0) card[--current].scrollIntoView({ behavior: "smooth" });
 };
 next.onclick = () => {
-if (current < card.length - 1)
-  card[++current].scrollIntoView({behavior: "smooth"});
+  if (current < card.length - 1)
+    card[++current].scrollIntoView({ behavior: "smooth" });
 };
 
 next.addEventListener("click", () => {
   next.classList.remove("sliderContainer-dog__btn--next");
-  arrayBotones[indice].classList.remove("slide__btn--disabled");
+  next.classList.add("sliderContainer-dog__btn--next--active");
+  back.classList.remove("sliderContainer-dog__btn--prev--active");
+  back.classList.add("sliderContainer-dog__btn--prev");
+  
 
- arrayImages[indice].classList.add("slide__img--active");
-  arrayBotones[indice].classList.add("slide__btn--active");
-})
+});
+back.addEventListener("click", () => {
+  back.classList.remove("sliderContainer-dog__btn--prev");
+  back.classList.add("sliderContainer-dog__btn--prev--active");
+  next.classList.remove("sliderContainer-dog__btn--next--active");
+  next.classList.add("sliderContainer-dog__btn--next");
+
+});

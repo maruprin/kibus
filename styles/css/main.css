@@ -121,7 +121,7 @@ body {
   --color-greyBtn: #d5dbe1;
   --color-footerBG: #111111;
   --color-greyTransparent: rgba(255, 255, 255, 0.3);
-  --color-primaryTransparent: rgba(93, 45, 20, 0.6);
+  --color-primaryTransparent: rgba(255, 120, 47, 0.3);
 }
 
 .header {
@@ -542,12 +542,24 @@ body {
     background-color: var(--color-greyTransparent);
   }
   .sliderContainer-dog__btn--prev {
-    top: 32%;
+    top: 35%;
     padding-right: 5px;
     left: 60px;
   }
+  .sliderContainer-dog__btn--prev--active {
+    background-color: var(--color-primaryTransparent);
+    top: 35%;
+    left: 60px;
+    padding-right: 5px;
+  }
   .sliderContainer-dog__btn--next {
-    top: 32%;
+    top: 35%;
+    left: 650px;
+    padding-left: 5px;
+  }
+  .sliderContainer-dog__btn--next--active {
+    background-color: var(--color-primaryTransparent);
+    top: 35%;
     left: 650px;
     padding-left: 5px;
   }
