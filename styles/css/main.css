@@ -582,6 +582,7 @@ body {
     padding-left: 0px !important;
     height: 515px;
     margin-top: -570px;
+    overflow-x: hidden;
   }
 }
 .sliderContainer-dog .cardsContainer-dog .card:hover {
@@ -663,12 +664,11 @@ body {
     width: 85%;
     margin: 0 auto;
     margin-top: 150px;
-    margin-bottom: 150px;
     padding-bottom: 0px;
   }
 }
 .product__functions--dispositivo {
-  background-image: url("../../../assets/img/dispositivo.png");
+  background-image: url("../../assets/img/dispositivo.png");
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;

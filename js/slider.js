@@ -4,25 +4,20 @@ const card = document.getElementsByClassName("child");
 const back = document.getElementById("prev-button");
 const next = document.getElementById("next-button");
 back.onclick = () => {
-  if (current > 0) card[--current].scrollIntoView({ behavior: "smooth" });
+  if (current > 0) {
+    card[--current].scrollIntoView({ behavior: "smooth", block: "center" });
+    back.classList.remove("sliderContainer-dog__btn--prev");
+    back.classList.add("sliderContainer-dog__btn--prev--active");
+    next.classList.remove("sliderContainer-dog__btn--next--active");
+    next.classList.add("sliderContainer-dog__btn--next");
+  }
 };
 next.onclick = () => {
-  if (current < card.length - 1)
-    card[++current].scrollIntoView({ behavior: "smooth" });
+  if (current < card.length - 1) {
+    card[++current].scrollIntoView({ behavior: "smooth", block: "center" });
+    next.classList.remove("sliderContainer-dog__btn--next");
+    next.classList.add("sliderContainer-dog__btn--next--active");
+    back.classList.remove("sliderContainer-dog__btn--prev--active");
+    back.classList.add("sliderContainer-dog__btn--prev");
+  }
 };
-
-next.addEventListener("click", () => {
-  next.classList.remove("sliderContainer-dog__btn--next");
-  next.classList.add("sliderContainer-dog__btn--next--active");
-  back.classList.remove("sliderContainer-dog__btn--prev--active");
-  back.classList.add("sliderContainer-dog__btn--prev");
-  
-
-});
-back.addEventListener("click", () => {
-  back.classList.remove("sliderContainer-dog__btn--prev");
-  back.classList.add("sliderContainer-dog__btn--prev--active");
-  next.classList.remove("sliderContainer-dog__btn--next--active");
-  next.classList.add("sliderContainer-dog__btn--next");
-
-});
