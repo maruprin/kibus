@@ -1,53 +1,101 @@
-.presentation{
-    margin-bottom: 167px;
-    &__img{
-        &--elipse{
-            width: 330px;
-            height: 280px;
-            position: absolute;
-            left: 20px;
-            &:hover{
-                transform: rotate(20deg);
-                transition: all 1.8s ease;
-            }
-        }
-        &--dogGirl{
-            width: 322px;
-            height: 260px;
-            position: relative;
-            left: 8px;
-            top: 17px;
-            &:hover{
-                transform: scale(1.05);
-                transition: all 1.8s ease;
-            }
-        }
+@use "../utils/_mixins";
+.presentation {
+  @include mixins.flexbox(column, nowrap, center, 0);
+  margin-bottom: 167px;
+  @media (min-width: 1200px) {
+    @include mixins.flexbox(row-reverse, nowrap, center, 0);
+  }
+  &__img {
+    width: 350px;
+    margin: 0 auto;
+
+    @media (min-width: 1200px) {
+      margin-right: 0;
+      width: 580px;
     }
-    &__title{
-        margin-top: 50px;
-        margin-bottom: 15px;
-        &--dot{
-            color: var(--color-primary);
-            
+    &--elipse {
+      width: 330px;
+      height: 280px;
+      position: absolute;
+      margin: 0 auto;
+      &:hover {
+        transform: rotate(20deg);
+        transition: all 1.8s ease;
+      }
+      @media (min-width: 1200px) {
+        width: 575px;
+        height: 495px;
+      }
+    }
+    &--dogGirl {
+      width: 322px;
+      height: 260px;
+      position: relative;
+      margin-top: 15px;
+      margin-left: 13px;
+      &:hover {
+        transform: scale(1.05);
+        transition: all 1.8s ease;
+      }
+      @media (min-width: 1200px) {
+        width: 565px;
+        height: 445px;
+        margin-left: 19px;
+        margin-top: 35px;
+      }
+    }
+  }
+  &__bloque2 {
+    @media (min-width: 1200px) {
+      padding-left: 30px;
+      max-width: 850px;
+    }
+
+    &__title {
+      margin-top: 50px;
+      margin-bottom: 15px;
+      @media (min-width: 1200px) {
+        font-size: 72px;
+        line-height: 72px;
+        font-weight: 700;
+        hyphens: none;
+        margin-bottom: 25px;
+      }
+      &--dot {
+        color: var(--color-primary);
+      }
+    }
+    &__text {
+      margin-bottom: 40px;
+      @media (min-width: 1200px) {
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 700;
+        max-width: 652px;
+        hyphens: none;
+        margin-bottom: 80px;
+      }
+    }
+    &__btn {
+      margin: 0 auto;
+      margin-bottom: 20px;
+      &--arrow {
+        background-image: url("/assets/svg/arrow-circleW.svg");
+        object-fit: cover;
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        &:hover {
+          background-image: url("/assets/svg/arrow-circleO.svg");
         }
+      }
     }
-    &__text{
-        margin-bottom: 40px;
-    }
-    &__btn{
-        margin: 0 auto;
-        margin-bottom: 20px;
-        &--arrow{
-            background-image: url('/assets/svg/arrow-circleW.svg');
-            object-fit: cover;
-            width: 30px;
-            height: 30px;
-            background-repeat: no-repeat;
-            &:hover{
-                background-image: url('/assets/svg/arrow-circleO.svg'
-                );
-            }
-            
-        }
-    }
+  }
+}
+.buttonsContainer {
+  @include mixins.flexbox(column, nowrap, center, 0);
+  @media (min-width: 1200px) {
+    @include mixins.flexbox(row, nowrap, flex-start, 20px);
+    max-width: 700px;
+  }
 }

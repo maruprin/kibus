@@ -1,87 +1,116 @@
-@use '../utils/_mixins';
-.footer{
-    background-color: var(--color-footerBG);
-    color: var(--color-white);
-    &__about{
-        padding-top: 100px;
-        &--title{
-            margin-bottom: 20px;
-        }
-        &--text{
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 22px; 
-            margin-bottom: 50px;         
-        }
+@use "../utils/_mixins";
+.footer {
+  width: 100%;
+  background-color: var(--color-footerBG);
+  color: var(--color-white);
+  @media (min-width: 1200px) {
+  @include mixins.grid(10, 1fr, 40px);
+  align-items: start;
+  grid-template-areas: 'about about about about policy policy redes redes pay pay';
+  padding: 30px;
+  padding-top: 50px;
+  }
+  &__about {
+    padding-top: 100px;
+    @media (min-width: 1200px) {
+      padding-top: 0px;
+      hyphens: none;
+      grid-area: about;
+      }
+    &--title {
+      margin-bottom: 20px;
     }
-    &__policy{
-        margin-bottom: 50px;
-        &--title{
-            margin-bottom: 10px;
-        }
-        &--link{
-            margin-bottom: 12px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 22px;
-            &:hover{
-                color: var(--color-primary);
-            }
-        }
+    &--text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 50px;
     }
-    &__contact{
-        margin-bottom: 50px;
-        &--title{
-            margin-bottom: 10px;
-        }
-        &--location{
-            margin-bottom: 12px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 22px;
-            &:hover{
-                color: var(--color-primary);
-            }
-        }
-        &--phone{
-            margin-bottom: 12px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 22px;
-            &:hover{
-                color: var(--color-primary);
-            }
-        }
+  }
+  &__policy {
+    margin-bottom: 50px;
+    @media (min-width: 1200px) {
+      margin-bottom: 0;
+      grid-area: policy;
+      }
+    &--title {
+      margin-bottom: 10px;
     }
-    &__redes{
-        margin-bottom: 40px;
-        @include mixins.flexbox(row, nowrap, flex-start, 30px);
-        &--icon{
-            padding: 10px;
-            border: 1px solid var(--color-footerBG);
-            
-            border-radius: 10px;
-            &:hover{
-                box-shadow: 12px 20px 65px 10px rgba(238,115,51,0.4);
-                transform: scale(1.2);
-                transition: all .3s ease;
-            }
-        }
+    &--link {
+      margin-bottom: 12px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      &:hover {
+        color: var(--color-primary);
+      }
     }
-    &__pay{
-        padding-bottom: 200px;
-        &--title{
-            margin-bottom: 15px;
-        }
-        &--iconContainer{
-            @include mixins.flexbox(row, nowrap, flex-start, 10px);
-            &--icon{
-            &:hover{
-                transform: scale(1.1);
-                transition: all .3s ease;
-            }
-        }
-        }
-        
+  }
+  &__contact {
+    margin-bottom: 50px;
+    @media (min-width: 1200px) {
+      display: none;
     }
+    &--title {
+      margin-bottom: 10px;
+    }
+    &--location {
+      margin-bottom: 12px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+    &--phone {
+      margin-bottom: 12px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+  &__redes {
+    margin-bottom: 40px;
+    @include mixins.flexbox(row, nowrap, flex-start, 30px);
+    @media (min-width: 1200px) {
+      grid-area: redes;
+      margin: 0 auto;
+    }
+    &--icon {
+      padding: 10px;
+      border: 1px solid var(--color-footerBG);
+      border-radius: 10px;
+      @media (min-width: 1200px) {
+        padding: 2px;
+      }
+      &:hover {
+        box-shadow: 12px 20px 65px 10px rgba(238, 115, 51, 0.4);
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  &__pay {
+    padding-bottom: 200px;
+    @media (min-width: 1200px) {
+      grid-area: pay;
+      padding: 0px;
+    }
+    &--title {
+      margin-bottom: 15px;
+    }
+    &--iconContainer {
+      @include mixins.flexbox(row, nowrap, flex-start, 10px);
+      &--icon {
+        &:hover {
+          transform: scale(1.1);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
 }

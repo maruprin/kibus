@@ -4,6 +4,12 @@
   box-shadow: 0px 14px 37px 19px rgba(126, 126, 126, 0.04);
   position: relative;
   top: -125px;
+  border-radius: 20px 0px 0px 20px;
+  @media (min-width: 1200px) {
+    margin-right: 40px;
+    margin-left: 40px;
+    border-radius: 20px;
+  }
 }
 .cardsContainer {
   width: 100%;
@@ -17,6 +23,9 @@
   @include mixins.flexbox(row, nowrap, space-between, 10px);
   scrollbar-width: none;
   overflow-x: auto;
+  @media (min-width: 1200px) {
+    border-radius: 20px;
+  }
 }
 .cardFood {
   width: 280px;
@@ -25,10 +34,10 @@
   display: inline-block;
   white-space: normal;
   flex: 0 0 auto;
-  &:hover{
+  &:hover {
     transform: scale(1.03);
-    transition: all .6s ease;
-   }
+    transition: all 0.6s ease;
+  }
   &__img {
     width: 195px;
     background-repeat: no-repeat;
@@ -70,6 +79,17 @@
   .elipse {
     display: block;
     margin: 0 auto;
+    width: 345px;
+    height: 330px;
+    @media (min-width: 1200px) {
+      width:692px;
+      height: 652px;
+    }
+  }
+  @media (min-width: 1200px) {
+    width: 680px;
+    height: 515px;
+    margin-left: 40px;
   }
   .cardsContainer-dog {
     width: 100%;
@@ -80,16 +100,31 @@
     overflow-x: auto;
     margin-top: -307px;
     padding-left: 25px !important;
+    @media (min-width: 1200px) {
+      padding-left: 0px !important;
+      height: 515px;
+      margin-top: -570px;
+    }
     .card {
-   &:hover{
-    transform: scale(1.03);
-    transition: all .5s ease;
-   }
+      &:hover {
+        transform: scale(1.03);
+        transition: all 0.5s ease;
+        @media (min-width: 1200px) {
+          transform: scale(1);
+          transition: all 0.5s ease;
+        }
+      }
+
       &__img {
         width: 328px;
         border-radius: 15px;
         display: block;
         margin: 0 auto;
+        @media (min-width: 1200px) {
+         width: 680px;
+         height: 515px;
+         object-fit: cover;
+        }
       }
     }
   }

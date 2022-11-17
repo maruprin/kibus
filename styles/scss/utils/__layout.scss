@@ -1,106 +1,104 @@
-@use './_mixins';
+@use "./_mixins";
 .h1 {
-    font-size: 32px;
-    line-height: 32px;
-    font-weight: 700;
-  }
-  
-  .h2 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-  }
-  
-  .h3 {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 21.6px;
-    color: var(--color-secondary);
-    opacity: 0.6;
-    &-white{
-        color: var(--color-white);
-    }
-  }
-  .h4{
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-  }
-  .h5{
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 20px;
-  }
-  //buttons
-  .btn {
-    border: 1.5px solid var(--color-primary);
-    text-align: center;
-    cursor: pointer;
-    padding: 16px 32px;
-    font-weight: 600;
-    font-size: 16px;
-    border-radius: 28px;
-    line-height: 18px;
-    margin-bottom: 20px;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.6px;
+  color: var(--color-secondary);
+  opacity: 0.6;
+  &-white {
     color: var(--color-white);
-    background-color: var(--color-primary);
-    &--gradient{
-      width: 191px;
-      height: 50px;
-      background-color: var(--gradient-primary);
+  }
+}
+.h4 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+//buttons
+.btn {
+  border: 1.5px solid var(--color-primary);
+  text-align: center;
+  cursor: pointer;
+  padding: 16px 32px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 28px;
+  line-height: 18px;
+  margin-bottom: 20px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  &--gradient {
+    width: 191px;
+    height: 50px;
+    background-color: var(--gradient-primary);
+  }
+  &--MArrow {
+    width: 225px;
+    height: 50px;
+    @include mixins.flexbox(row, nowrap, center, 15px);
+  }
+  &--LArrow {
+    width: 327px;
+    height: 50px;
+    padding: 16px 70px;
+    @include mixins.flexbox(row, nowrap, center, 15px);
+    img:nth-of-type(2) {
+      display: none;
     }
-    &--MArrow{
-      width: 225px;
-      height: 50px;
-      @include mixins.flexbox(row, nowrap, center, 15px);
-    }
-    &--LArrow{
-      width: 327px;
-      height: 50px;
-      padding: 16px 70px;
-      @include mixins.flexbox(row, nowrap, center, 15px);
-      img:nth-of-type(2){
+    &:hover {
+      img:nth-of-type(1) {
         display: none;
       }
-      &:hover{
-        img:nth-of-type(1){
-          display: none;
-        }
-        img:nth-of-type(2){
-          display: block;
-        }
+      img:nth-of-type(2) {
+        display: block;
       }
     }
-    &--large{
-      width: 327px;
-      height: 50px;
-      padding: 16px 70px;
-    }
-    
-    &:hover {
-      color: var(--color-primary);
-      background-color: var(--color-white);
-      border: 1.5px solid var(--color-primary);
-    }
   }
-  
-  // Layout
-  .px-25 {
-    padding-right: 25px;
-    padding-left: 25px;
+  &--large {
+    width: 327px;
+    height: 50px;
+    padding: 16px 70px;
   }
-  
-  .py-30 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+
+  &:hover {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    border: 1.5px solid var(--color-primary);
   }
-  
-  .mx-20 {
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  .mb-40 {
-    margin-bottom: 40px;
-  }
-  
-  
+}
+
+// Layout
+.px-25 {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.py-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.mx-20 {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}

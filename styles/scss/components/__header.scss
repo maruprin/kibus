@@ -1,13 +1,23 @@
-.header{
-    width: 100%;
-    height: 83px;
-    padding: 25px;
-    position: fixed;
-    top: 0;
-    background-color: var(--color-white);
-    z-index: 100;
-    &__logo{
-        width: 72px;
-        height: 32px;
+.header {
+  width: 100%;
+  height: 83px;
+  padding: 25px;
+  position: fixed;
+  top: 0;
+  background-color: var(--color-white);
+  z-index: 100;
+  @media (min-width: 1200px) {
+    height: 100px;
+  }
+  &__logo {
+    background-image: url("../../../assets/img/logo-mobile.svg");
+    background-repeat: no-repeat;
+    width: 72px;
+    height: 32px;
+    @media (min-width: 1200px) {
+      background-image: url("../../../assets/img/logo.svg");
+      width: 120px;
+      height: 55px;
     }
+  }
 }
