@@ -144,7 +144,7 @@ body {
 }
 @media (min-width: 1200px) {
   .header__logo {
-    background-image: url("../../../assets/img/logo.svg");
+    background-image: url("../../assets/img/logo.svg");
     width: 120px;
     height: 55px;
   }
@@ -636,9 +636,14 @@ div {
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0 auto;
-  width: 390px;
+  width: 100%;
   height: 480px;
   background-size: cover;
+}
+@media (min-width: 600px) {
+  .product__functions--dispositivo {
+    width: 390px;
+  }
 }
 @media (min-width: 1200px) {
   .product__functions--dispositivo {
@@ -659,12 +664,17 @@ div {
 }
 .product__functions--benefits {
   padding: 40px;
-  width: 390px;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 100%;
   gap: 60px;
+}
+@media (min-width: 600px) {
+  .product__functions--benefits {
+    width: 390px;
+  }
 }
 @media (min-width: 1200px) {
   .product__functions--benefits {
@@ -680,7 +690,7 @@ div {
   }
 }
 .product__functions--benefits .item {
-  width: 126px;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
