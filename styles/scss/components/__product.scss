@@ -32,7 +32,6 @@
     padding-bottom: 70px;
     @include mixins.flexbox(column, nowrap, center, 0);
     @media (min-width: 1200px) {
-      // @include mixins.grid(4, 1fr, 90px);
       @include mixins.flexbox(row-reverse, nowrap, center, 0px);
       width: 85%;
       margin: 0 auto;
@@ -73,7 +72,7 @@
       padding: 40px;
       width: 100%;
       margin: 0 auto;
-      @include mixins.grid(2, 100%, 35px);
+      @include mixins.grid(2, 30%, 35px);
       @media (min-width: 600px) {
         width: 390px;
       }
